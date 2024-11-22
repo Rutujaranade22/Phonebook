@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phonebook</title>
+</head>
+<body>
+    <h1>Phonebook</h1>
+    <input type="text" id="search" placeholder="search">
+    <button type="button" onclick="search()">search</button>
+    <p id="result"></p>
+
+    <script>
+        const contacts={
+            rutu :"9822467751",
+            sarthk :"7218197665",
+            shreyash:"9822467765",
+            shraddha :"9982467751"
+}
+ function search(){
+    const searchInput= document.getElementById("search")
+    const query = searchInput.toLowercase();
+
+    const mobile =contacts(query)
+ }
+    </script>
+</body>
+</html>
