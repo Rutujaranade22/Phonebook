@@ -1,41 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Phonebook</title>
+    <link rel="icon" href="phone-book.png" type="png">
     <style>
-.head
-   {
-    
-   } </style>
+        .head {
+            text-align: center;
+            font-size: 40px;
+            font-family: sans-serif;
+            color: rgb(112, 112, 177);
+
+        }
+
+
+
+        button {
+            font-size: 20px;
+            padding: 10px 20px;
+            background-color: rgb(112, 112, 177);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: rgb(92, 92, 157);
+        }
+
+        input[type="text"] {
+            height: 40px;
+            font-size: 18px;
+            padding: 5px 10px;
+            border: 2px solid rgb(112, 112, 177);
+            border-radius: 8px;
+        }
+    </style>
 </head>
+
 <body>
-    <h1 class="head">Phonebook</h1>
-    <input type="text" id="search" placeholder="search">
-    <button type="button" onclick="search()">search</button>
-    <p id="result"></p>
+    <div class="head">
+        <h1>Phonebook</h1>
+        <input type="text" id="search" placeholder="search">
+        <button type="button" onclick="search()">search</button>
+        <p id="result"></p>
+    </div>
 
     <script>
-        const contacts={
-            rutu :"9822467751",
-            sarthk :"7218197665",
-            shreyash:"9822467765",
-            shraddha :"9982467751",
-}
- function search(){
-    const searchInput= document.getElementById("search");
-    const query = searchInput.value.toLowerCase();
+        const contacts = {
+            rutu: "9822467751",
+            sarthak: "7218197665",
+            shreyash: "9822467765",
+            shraddha: "5982467751",
+            gauri: "8675984613",
+            sejj: "59759426123"
+        }
+        function search() {
+            const searchInput = document.getElementById("search");
+            const query = searchInput.value.toLowerCase();
 
-    const mobile =contacts[query]
-    const result = document.getElementById("result");
+            const mobile = contacts[query]
+            const result = document.getElementById("result");
 
-    if(mobile){
-        result.innerHTML = `Mobile number of ${query} is <b>${mobile}</b>`;
-    }
-    else{result.innerText=`contact not found`};
+            if (mobile) {
+                result.innerHTML = `Mobile number of   ${query}  is <b>${mobile}</b>`;
+            }
+            else { result.innerText = `contact not found` };
 
- }
+        }
     </script>
 </body>
+
 </html>
