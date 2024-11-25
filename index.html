@@ -9,7 +9,7 @@
     <style>
         .head {
             text-align: center;
-            font-size: 40px;
+            font-size: 30px;
             font-family: sans-serif;
             color: rgb(112, 112, 177);
 
@@ -43,7 +43,7 @@
 
 <body>
     <div class="head">
-        <h1>Phonebook</h1>
+        <h1>Phonebook..📞</h1>
         <input type="text" id="search" placeholder="search">
         <button type="button" onclick="search()">search</button>
         <p id="result"></p>
@@ -51,12 +51,12 @@
 
     <script>
         const contacts = {
-            rutu: "9822467751",
-            sarthak: "7218197665",
-            shreyash: "9822467765",
-            shraddha: "5982467751",
-            gauri: "8675984613",
-            sejj: "59759426123"
+            rutu: "9822467751 💕",
+            sarthak: "7218197665 💫",
+            shreyash: "9822467765 💫",
+            shraddha: "5982467751 💫",
+            gauri: "8675984613 💕",
+            sejj: "59759426123 💕"
         }
         function search() {
             const searchInput = document.getElementById("search");
@@ -68,7 +68,7 @@
             if (mobile) {
                 result.innerHTML = `Mobile number of   ${query}  is <b>${mobile}</b>`;
             }
-            else { result.innerText = `contact not found` };
+            else { result.innerText = `contact not found ...🙅‍♂️🙊` };
 
         }
     </script>
